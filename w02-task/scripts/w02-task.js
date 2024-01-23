@@ -10,7 +10,7 @@ const fullName = 'Stephen Kyle Suiton';
 const currentYear = new Date().getFullYear();
 
 // Declare and instantiate a variable to hold the file path and name of the image
-const profilePicture = 'w02-task/images/mypic.jpg';
+const profilePicture = 'images/mypic.jpg';
 
 /* Step 3 - Element Variables */
 
@@ -58,6 +58,7 @@ favoriteFoods.shift();
 favoriteFoods.pop();
 
 // Update the content of the foodElement with the modified favoriteFoods array
+const foodElement = document.getElementById('food');
 foodElement.innerHTML = favoriteFoods.join('<br>');
 
 
