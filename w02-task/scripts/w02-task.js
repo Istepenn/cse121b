@@ -3,6 +3,7 @@
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
+
 // Declare and instantiate a variable to hold your name
 const fullName = 'Stephen Kyle Suiton';
 
@@ -24,7 +25,7 @@ const foodElement = document.getElementById('food');
 const yearElement = document.querySelector('#year');
 
 // Use any viable method to get the profile image element
-const imageElement = document.getElementById('profile-image');
+const imageElement = document.querySelector('main picture img');
 
 /* Step 4 - Adding Content */
 
@@ -43,31 +44,19 @@ imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 /* Step 5 - Array */
 
 // Declare an array variable to hold your favorite foods
-const favFoods = ['Pizza', 'Chocolate', 'Sushi'];
+const favoriteFoods = ['Pizza', 'Chocolate', 'Sushi'];
 
 // Declare and instantiate a variable to hold another single favorite food item
 const newFavoriteFood = 'Ice Cream';
 
-// Add the value stored in this new variable to your favorite food array
-favFoods.push(newFavoriteFood);
+// Add the new favorite food to your favoriteFoods array
+favoriteFoods.push(newFavoriteFood);
 
-// Append the new array values onto the displayed content of the HTML element with the id of food
-const foodElement = document.getElementById('food');
-foodElement.innerHTML += `${favFoods.join('<br>')}`;
+// Remove the first element in the favoriteFoods array
+favoriteFoods.shift();
 
-// Remove the first element in the favorite food array
-favFoods.shift();
+// Remove the last element in the favoriteFoods array
+favoriteFoods.pop();
 
-// Append the array output showing the modified array, using a line break
-foodElement.innerHTML += `<br>${favFoods.join('<br>')}`;
-
-// Remove the last element in the favorite food array
-favFoods.pop();
-
-// Append the array output with this final modified favorite foods array
-foodElement.innerHTML += `<br>${favFoods.join('<br>')}`;
-
-
-
-
-
+// Update the content of the foodElement with the modified favoriteFoods array
+foodElement.innerHTML = favoriteFoods.join('<br>');
