@@ -44,7 +44,7 @@ imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 /* Step 5 - Array */
 
 // Declare an array variable to hold your favorite foods
-const favoriteFoods = ['','Soups', 'Sushi','Ramen', 'Curry'];
+const favoriteFoods = ['', 'Soups', 'Sushi', 'Ramen', 'Curry'];
 
 // Declare and instantiate a variable to hold another single favorite food item
 const newFavoriteFood = 'Ice Cream';
@@ -53,10 +53,13 @@ const newFavoriteFood = 'Ice Cream';
 favoriteFoods.push(newFavoriteFood);
 
 // Remove the first element in the favoriteFoods array
-favoriteFoods.shift();
+const removedFirst = favoriteFoods.shift();
 
 // Remove the last element in the favoriteFoods array
-favoriteFoods.pop();
+const removedLast = favoriteFoods.pop();
 
 // Update the content of the foodElement with the modified favoriteFoods array
 foodElement.innerHTML = favoriteFoods.join('<br>');
+
+// Add the removedFirst and removedLast items to the foodElement with line breaks
+foodElement.innerHTML += `<br>${removedFirst}<br>${removedLast}`;
